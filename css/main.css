@@ -1,0 +1,128 @@
+/*============ GOOGLE FONTS ===========*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@400;700&display=swap");
+/*============ GOOGLE FONTS END===========*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*========= COMPONENTS =========*/
+.section {
+  padding: 3rem 2rem 4rem;
+}
+.section__heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.6rem;
+  line-height: 1.1;
+}
+
+.grid-container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.grid-item {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.grid-item--text {
+  padding: 3rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-item--orange-bg {
+  background-color: #f0974f;
+}
+.grid-item--purple-bg {
+  background-color: #8a5cd9;
+}
+.grid-item--dark-bg {
+  background-color: #000000;
+}
+.grid-item__author {
+  margin-top: 2rem;
+  font-weight: "Raleway", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .section__heading {
+    font-size: 4.8rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .grid-item--2 {
+    grid-row: span 2;
+  }
+  .grid-item--3 {
+    grid-row: span 2;
+  }
+  .grid-item--5 {
+    grid-column: span 2;
+  }
+  .grid-item--6 {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 968px) {
+  .grid-container {
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+  }
+  .grid-item--5 {
+    grid-column: col-start 3/col-end -1;
+    grid-row: 1/1;
+  }
+  .grid-item--6 {
+    grid-column: col-start 3/col-end -1;
+    grid-row: 2/span 2;
+  }
+}
+.footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+.footer__credit {
+  font-size: 1.28rem;
+  padding: 3rem 2rem;
+}
+.footer__link {
+  text-underline-offset: 0.2em;
+  color: #8a5cd9;
+  transition: all 0.3s ease-in-out;
+}
+.footer__link:hover {
+  text-decoration: none;
+}
